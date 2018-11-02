@@ -1,0 +1,46 @@
+version: '3.6'
+services:
+
+  ansible-playbook-ara:
+    image: pamtrak06/ansible-playbook-ara:1.0
+    container_name: ansible-playbook-ara
+    restart: always
+    build:
+      context: $PWD/ansible/build
+      dockerfile: $PWD/ansible/build/Dockerfile
+      args:
+        - http_proxy
+        - https_proxy
+        - HTTP_PROXY
+        - HTTPS_PROXY
+        - NO_PROXY
+        - no_proxy
+    ports:
+      - "2222:22"
+    # environment:
+    #   - DATABASE_TYPE=POSTGRES      # Local sqlite (SQLITE, default) or Mysql (MYSQL) or Postgres (POSTGRES)
+    #   - DATABASE_USER=ansible
+    #   - DATABASE_PASSWORD=ansible
+    #   - DATABASE_HOST=ansible_db
+    #   - DATABASE_PORT=5432
+    volumes:
+      - $PWD/ansible/volumes/config:/etc/ansible
+      - $PWD/ansible/log:/var/log/ansible
+    networks:
+      - net-cluster
+      
+  # ara-database:
+  #   image: mysql:8
+  #   container_name: ansible-ara-database
+  #   restart: always
+  #
+  # ara-database:
+  #   image: postgres:11
+  #   container_name: ansible-ara-database
+  #   restart: always
+    
+networks:
+  net-cluster:
+    driver: bridge
+
+
