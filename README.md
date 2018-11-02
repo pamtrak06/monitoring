@@ -12,3 +12,6 @@
 - [Monitorer votre infra avec Telegraf, InfluxDB et Grafana](https://blog.octo.com/monitorer-votre-infra-avec-telegraf-influxdb-et-grafana/)
 - [Telegraf, InfluxDB et Grafana](https://www.supinfo.com/articles/single/5747-telegraf-influxdb-grafana)
 - [Docker compose for Telegraf, InfluxDB et Grafana](https://github.com/nicolargo/docker-influxdb-grafana/blob/master/docker-compose.yml)
+
+### Logs manager
+- [Build Your Unified Logging Layer](https://www.fluentd.org/)
