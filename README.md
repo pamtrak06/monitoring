@@ -19,6 +19,9 @@
 ### Logs manager
 - [Build Your Unified Logging Layer](https://www.fluentd.org/)
 
+### Deployment
+- [Ansible](https://www.ansible.com/),[Ansible monitored by ara](https://github.com/openstack/ara), [Ansible Tower open source : AWX](https://github.com/geerlingguy/awx-container)
+
 ## Custom design with Telegraf, influxdb, grafana stack and Ansible
 
 - [Ansible monitoring](https://docs.ansible.com/ansible/2.6/modules/list_of_monitoring_modules.html)
